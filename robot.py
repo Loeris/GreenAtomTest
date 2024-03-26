@@ -5,6 +5,7 @@ class Counter:
     def __init__(self):
         self.active = False
         self.value = 0
+        self.timer = None
 
     def count(self):
         # Тело робота
@@ -12,7 +13,8 @@ class Counter:
         self.value += 1
         if self.active:
             # Устанавливает таймер, который через секунду снова запустит эту функцию
-            threading.Timer(1.0, self.count).start()
+            self.timer = threading.Timer(1.0, self.count)
+            self.timer.start()
 
     def start(self, begin: int):
         # Запуск робота
@@ -23,3 +25,5 @@ class Counter:
     def end(self):
         # Остановка робота
         self.active = False
+        if self.timer:
+            self.timer.cancel()

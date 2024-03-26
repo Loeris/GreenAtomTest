@@ -48,7 +48,7 @@ html_root = """<!DOCTYPE html>
 
   <!-- Input field -->
   <label for="numberInput">Enter a number:</label>
-  <input type="number" id="numberInput">
+  <input type="number" id="numberInput" value="0">
 
   <!-- Button element -->
   <button onclick="redirectToStartPage()">Start</button>
