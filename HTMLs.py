@@ -20,12 +20,12 @@ html_start = """<!DOCTYPE html>
 <body>
 
   <!-- Button element -->
-  <button onclick="window.location.href='/'">End</button>
+  <button onclick="window.location.href='/end'">End</button>
 
 </body>
 </html>"""
 
-html_root = """<!DOCTYPE html>
+html_end = """<!DOCTYPE html>
 <html>
 <head>
   <title>Start Page</title>
@@ -46,6 +46,9 @@ html_root = """<!DOCTYPE html>
 </head>
 <body>
 
+  <!-- Button to navigate to the `/show` page -->
+  <button onclick="redirectToShowPage()">Show Logs</button>
+
   <!-- Input field -->
   <label for="numberInput">Enter a number:</label>
   <input type="number" id="numberInput" value="0">
@@ -54,6 +57,10 @@ html_root = """<!DOCTYPE html>
   <button onclick="redirectToStartPage()">Start</button>
 
   <script>
+    function redirectToShowPage() {
+      window.location.href = "/show";
+    }
+
     function redirectToStartPage() {
       const number = document.getElementById("numberInput").value;
       window.location.href = `start?begin=${number}`;
