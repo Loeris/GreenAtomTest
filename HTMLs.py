@@ -1,7 +1,7 @@
 html_start = """<!DOCTYPE html>
 <html>
 <head>
-  <title>Counting</title>
+  <title>Ведётся счёт</title>
   <style>
     /* CSS styles for centering the button */
     body {
@@ -20,7 +20,7 @@ html_start = """<!DOCTYPE html>
 <body>
 
   <!-- Button element -->
-  <button onclick="window.location.href='/end'">End</button>
+  <button onclick="window.location.href='/end'">Остановить робота</button>
 
 </body>
 </html>"""
@@ -28,7 +28,7 @@ html_start = """<!DOCTYPE html>
 html_end = """<!DOCTYPE html>
 <html>
 <head>
-  <title>Start Page</title>
+  <title>Робот-счётчик</title>
   <style>
     /* CSS styles for centering and sizing */
     body {
@@ -47,14 +47,14 @@ html_end = """<!DOCTYPE html>
 <body>
 
   <!-- Button to navigate to the `/show` page -->
-  <button onclick="redirectToShowPage()">Show Logs</button>
+  <button onclick="redirectToShowPage()">Показать историю</button>
 
   <!-- Input field -->
-  <label for="numberInput">Enter a number:</label>
+  <label for="numberInput">Введите число:</label>
   <input type="number" id="numberInput" value="0">
 
   <!-- Button element -->
-  <button onclick="redirectToStartPage()">Start</button>
+  <button onclick="redirectToStartPage()">Запустить робота</button>
 
   <script>
     function redirectToShowPage() {

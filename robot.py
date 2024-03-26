@@ -59,7 +59,8 @@ class Counter:
         self.cursor.execute('''
     SELECT id, startTime, endTime, startNumber, JULIANDAY(endTime) - JULIANDAY(startTime) AS difference
     from Sessions''')
-        html = """<style>
+        html = """<title>История запусков</title>
+        <style>
             /* CSS styles for centering the button */
             body {
               display: flex;
@@ -74,7 +75,7 @@ class Counter:
             }
           </style>"""
         html += "<table>\n"
-        html += "<tr><th>ID</th><th>Start Time</th><th>End Time</th><th>Begin</th><th>Difference</th></tr>\n"
+        html += "<tr><th>ID</th><th>Время запуска</th><th>Время остановки</th><th>Стартовое число</th><th>Длительность работы</th></tr>\n"
 
         for item in self.cursor.fetchall():
             id, startTime, endTime, begin, difference = item
@@ -83,9 +84,9 @@ class Counter:
             html += f"<td>{startTime}</td>"
             html += f"<td>{endTime}</td>"
             html += f"<td>{begin}</td>"
-            html += f"<td>{f"{24 * 60 * 60 * difference:.0f} seconds"}</td>"
+            html += f"<td>{f"{24 * 60 * 60 * difference:.0f} секунд"}</td>"
             html += "</tr>\n"
 
         html += "</table>"
-        html += """<button onclick="window.location.href='/'">Return</button>"""
+        html += """<button onclick="window.location.href='/'">Вернуться</button>"""
         return html

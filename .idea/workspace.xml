@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="740c1e49-82fd-42c1-bc8f-de594b5072ed" name="Changes" comment="Исправлены 2 бага:&#10;Значение по умолчанию теперь 0&#10;После остановки робота не выводится одно лишнее значение">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="740c1e49-82fd-42c1-bc8f-de594b5072ed" name="Changes" comment="Добавлено взаимодействие с базой данных">
       <change beforePath="$PROJECT_DIR$/HTMLs.py" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot.py" beforeDir="false" afterPath="$PROJECT_DIR$/robot.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +98,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711447454076</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Добавлено взаимодействие с базой данных">
+      <option name="closed" value="true" />
+      <created>1711466826947</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711466826947</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -118,6 +123,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Первый коммит" />
     <MESSAGE value="Исправлены 2 бага:&#10;Значение по умолчанию теперь 0&#10;После остановки робота не выводится одно лишнее значение" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлены 2 бага:&#10;Значение по умолчанию теперь 0&#10;После остановки робота не выводится одно лишнее значение" />
+    <MESSAGE value="Добавлено взаимодействие с базой данных" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлено взаимодействие с базой данных" />
   </component>
 </project>
