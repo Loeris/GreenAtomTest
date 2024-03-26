@@ -55,6 +55,10 @@ class Counter:
         if self.timer:
             self.timer.cancel()
 
+    def clear(self):
+        self.cursor.execute("DROP TABLE Sessions")
+        self.create_table()
+
     def show(self):
         self.cursor.execute('''
     SELECT id, startTime, endTime, startNumber, JULIANDAY(endTime) - JULIANDAY(startTime) AS difference
@@ -74,6 +78,7 @@ class Counter:
               padding: 10px 20px;
             }
           </style>"""
+        html += """<button onclick="window.location.href='/clear'">Очистить историю</button>"""
         html += "<table>\n"
         html += "<tr><th>ID</th><th>Время запуска</th><th>Время остановки</th><th>Стартовое число</th><th>Длительность работы</th></tr>\n"
 

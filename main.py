@@ -34,6 +34,11 @@ def start(begin: int = 0):
 def show():
     return HTMLResponse(robot.show())
 
+@app.get("/clear")
+def clear():
+    robot.clear()
+    return HTMLResponse(html_end)
+
 
 if __name__ == "__main__":
     # Запуск сервера
