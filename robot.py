@@ -4,15 +4,15 @@ import sqlite3
 
 class Counter:
     def __init__(self):
-        self.active = False
-        self.value = 0
+        self.active = False # Флаг, включающий/выключающий робота
+        self.value = 0 # Значение, которое выведет робот
         self.timer = None
-        self.conn = sqlite3.connect("robot.db", check_same_thread=False)
-        self.cursor = self.conn.cursor()
-        self.sessionID = 0
-
+        self.conn = sqlite3.connect("robot.db", check_same_thread=False) # Соединение с БД
+        self.cursor = self.conn.cursor() # Курсор для взаимодействия с БД
+        self.sessionID = 0 # ID последней вставленной в БД строки, для последующего обновления этой строки
 
     def create_table(self):
+        # Создание таблицы для хранения информации о запусках
         self.cursor.execute('''
     CREATE TABLE IF NOT EXISTS Sessions (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -56,13 +56,18 @@ class Counter:
             self.timer.cancel()
 
     def clear(self):
+        # Очистка истории запусков
         self.cursor.execute("DROP TABLE Sessions")
         self.create_table()
 
     def show(self):
+        # Показ истории запусков
+
+        # Получение информации из БД
         self.cursor.execute('''
     SELECT id, startTime, endTime, startNumber, JULIANDAY(endTime) - JULIANDAY(startTime) AS difference
     from Sessions''')
+        # Создание html файла
         html = """<title>История запусков</title>
         <style>
             /* CSS styles for centering the button */
@@ -80,8 +85,9 @@ class Counter:
           </style>"""
         html += """<button onclick="window.location.href='/clear'">Очистить историю</button>"""
         html += "<table>\n"
-        html += "<tr><th>ID</th><th>Время запуска</th><th>Время остановки</th><th>Стартовое число</th><th>Длительность работы</th></tr>\n"
-
+        html += ("<tr><th>ID</th><th>Время запуска</th><th>Время остановки</th><th>Стартовое "
+                 "число</th><th>Длительность работы</th></tr>\n")
+        # Вставка полученной из БД информации в html файл
         for item in self.cursor.fetchall():
             id, startTime, endTime, begin, difference = item
             html += "<tr>"

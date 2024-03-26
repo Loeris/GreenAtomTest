@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="740c1e49-82fd-42c1-bc8f-de594b5072ed" name="Changes" comment="Перевод текста на русский язык">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="740c1e49-82fd-42c1-bc8f-de594b5072ed" name="Changes" comment="Добавление очистки истории запусков">
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/robot.py" beforeDir="false" afterPath="$PROJECT_DIR$/robot.py" afterDir="false" />
     </list>
@@ -116,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711467266331</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Добавление очистки истории запусков">
+      <option name="closed" value="true" />
+      <created>1711468176829</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1711468176829</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -124,7 +131,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -135,6 +154,7 @@
     <MESSAGE value="Исправлены 2 бага:&#10;Значение по умолчанию теперь 0&#10;После остановки робота не выводится одно лишнее значение" />
     <MESSAGE value="Добавлено взаимодействие с базой данных" />
     <MESSAGE value="Перевод текста на русский язык" />
-    <option name="LAST_COMMIT_MESSAGE" value="Перевод текста на русский язык" />
+    <MESSAGE value="Добавление очистки истории запусков" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление очистки истории запусков" />
   </component>
 </project>

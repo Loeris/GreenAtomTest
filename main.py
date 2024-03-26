@@ -32,10 +32,12 @@ def start(begin: int = 0):
 
 @app.get("/show")
 def show():
+    # Показ истории запусков
     return HTMLResponse(robot.show())
 
 @app.get("/clear")
 def clear():
+    # Очистка истории запусков
     robot.clear()
     return HTMLResponse(html_end)
 
